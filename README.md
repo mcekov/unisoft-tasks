@@ -25,6 +25,7 @@ npm install
 ```sh
 npm run dev
 ```
+### username: admin password: password
 
 ### Type-Check, Compile and Minify for Production
 
