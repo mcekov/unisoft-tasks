@@ -56,18 +56,21 @@ const calculateHighlights = (passes) => {
 
   // console.log(stats);
 
-  // Calculate the most complete percentage
+  // Calculate percentage
   const mostCompletePercentage = Object.entries(stats).reduce(
-    (best, [receiver, { completed, total }]) => {
+    (bestAcc, [receiver, { completed, total }]) => {
+
       const percentage = (completed / total) * 100;
-      return percentage > best.value
+
+      return percentage > bestAcc.value
         ? { player: receiver, value: `${percentage.toFixed()}%` }
-        : best;
+        : bestAcc;
+
     },
     { player: null, value: 0 },
   );
 
-  // Find the longest pass
+  // Longest pass
   const longDistancePass = passes.reduce(
     (bestAcc, pass) =>
       pass.distance > bestAcc.value
@@ -80,5 +83,6 @@ const calculateHighlights = (passes) => {
 };
 
 const result = calculateHighlights(passes);
+
 console.log(result.longDistancePass);
 console.log(result.mostCompletePercentage);
