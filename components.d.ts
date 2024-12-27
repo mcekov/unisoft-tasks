@@ -12,7 +12,6 @@ declare module 'vue' {
     AppErrorProdSection: typeof import('./src/components/AppError/AppErrorProdSection.vue')['default']
     AuthLayout: typeof import('./src/components/Layout/main/AuthLayout.vue')['default']
     ErrorAlert: typeof import('./src/components/Alerts/ErrorAlert.vue')['default']
-    Navigation: typeof import('./src/components/Layout/Navigation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TopNavbar: typeof import('./src/components/Layout/TopNavbar.vue')['default']
